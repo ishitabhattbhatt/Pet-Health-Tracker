@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #8474a1;
+    color: #fff;
+    flex-wrap: nowrap; /* For responsiveness */
+}
+
+.name {
+    font-size: 36px;
+    text-align: center;
+    flex: 1 100%; /* Takes full width on small screens */
+    margin: 10px 0;
+}
+
+.header-btn {
+    background-color: lavender;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.header-btn:hover {
+    background-color: purple;
+    color: azure;
+}
+
+/* Logo */
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin: 10px 0; /* Adds margin between boxes */
+}
+
+.feature-box h3 {
+    color: #8474a1;
+}
+
+.feature-box p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .feature-box {
+        width: 45%; /* Two columns layout */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .header-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .feature-box {
+        width: 100%; /* One column layout */
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .header-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

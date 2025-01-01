@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+  .how-it-works {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .step {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step-number {
+    background-color: #8474a1;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+  }
+  
+  .step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 16px;
+    color: #555;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #8474a1;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.name{
+    text-align: center;
+    font-size: 50px;
+    flex: 2;
+}
+
+.header-btn {
+    background-color: lavender;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 2; /* Flex-grow for buttons to stay to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-btn:hover {
+    background-color: purple;
+    color:azure;
+}  
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+main {
+  flex: 1; /* Takes up all available space */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Slider container */
+.slider-container {
+  max-width: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative; /* So that arrows can be positioned relative to the container */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img, .slide video {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+video {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Arrow Button Styles */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+

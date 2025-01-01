@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders and Alerts</title>
+    <link rel="stylesheet" href="alert.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="pet.html">
+                <img src="Healthy Paws.png" width="100" height="100" alt="healthy paws logo">
+            </a>
+        </div>
+        <h1 class="name">Healthy Paws - Track your pet's health</h1>
+        <a href="dashboard.html"><button class="header-btn">Dashboard</button></a>
+        <a href="petoverview.html"><button class="header-btn">Pet Overview</button></a>
+        <a href="trackhealth.html"><button class="header-btn">Track Health</button></a>
+        <a href="alert.html"><button class="header-btn">Reminders & Alerts</button></a>
+        <a href="settings.html"><button class="header-btn">Settings</button></a>
+        <a href="login.html"><button class="header-btn">Logout</button></a>
+    </header>
+    <div class="container">
+        <h1>Reminders and Alerts</h1>
+
+        <div class="reminder-form">
+            <h2>Add a Reminder</h2>
+            <form id="reminderForm" action="/add-reminder" method="post">
+                <label for="reminderText">Reminder:</label>
+                <input type="text" id="reminderText" required placeholder="Enter your reminder">
+                
+                <label for="reminderDate">Date:</label>
+                <input type="date" id="reminderDate" required>
+
+                <label for="reminderTime">Time:</label>
+                <input type="time" id="reminderTime" required>
+
+                <button type="submit">Add Reminder</button>
+            </form>
+        </div>
+
+        <div class="reminder-list">
+            <h2>Upcoming Reminders</h2>
+            <ul id="reminderList"></ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><img src="Facebook PNG Ícone Logo Transparente Sem Fundo.jpeg" alt="Facebook"></a>
+            <a href="#"><img src="x twitter logo _ Twitter _ Social media logo.jpeg" alt="Twitter"></a>
+            <a href="#"><img src="Instagram Logo PNG - Free Download.jpeg" alt="Instagram"></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Pet Health Tracker | All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="alert.js"></script>
+</body>
+</html>

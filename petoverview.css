@@ -1,0 +1,393 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.pet-overview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pet-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.pet-card:hover {
+  transform: scale(1.05); /* Add scale effect on hover */
+}
+
+.pet-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pet-details {
+  padding: 15px;
+}
+
+.pet-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.pet-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #8474a1;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.name {
+  text-align: center;
+  font-size: 50px;
+  flex: 2;
+}
+
+.header-btn {
+  background-color: lavender;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-btn:hover {
+  background-color: purple;
+  color: azure;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #8474a1;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ddd;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+}
+
+.footer-section .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-section .social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  background-color: #8474a1;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 1024px) {
+  .pet-card {
+    width: 45%; /* Adjust card size for medium screens */
+  }
+  
+  .name {
+    font-size: 40px; /* Adjust title size */
+  }
+  
+  .header-btn {
+    padding: 8px 15px; /* Adjust button padding */
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pet-card {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .name {
+    font-size: 32px; /* Smaller title on small screens */
+  }
+
+  .header-btn {
+    font-size: 12px; /* Smaller button text */
+    padding: 6px 12px;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    padding: 10px; /* Add padding for better spacing */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: 28px;
+  }
+
+  .header-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .pet-details p {
+    font-size: 14px; /* Smaller text in the pet details */
+  }
+
+  .footer-section h4 {
+    font-size: 16px; /* Smaller headings */
+  }
+}
+
+/* Add Pet Card Style */
+.add-pet-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-pet-btn {
+  background-color: lavender;
+  border: none;
+  color: purple;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-pet-btn:hover {
+  background-color: lavenderblush;
+  color:black;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #ffffff; /* White background for the form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+/* Close button */
+.close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 24px;
+  color: #ff0000; /* Red color for visibility */
+}
+
+/* Heading styles */
+h2 {
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555; /* Medium gray */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+/* Submit button styles */
+.submit-btn {
+  padding: 10px;
+  background-color: purple; /* Blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+.submit-btn:hover {
+  background-color: lavender; /* Darker blue on hover */
+  color:black;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: black;
+}
+
+#heading {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group input[type="file"] {
+  padding: 3px;
+}
+
+.form-group button {
+  background-color: #8474a1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: purple;
+}

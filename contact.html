@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <div class = "wrapper">
+    <header>
+        <div class="logo"><a href="pet.html"><img src ="Healthy Paws.png"  loading="lazy" width="100" height="100" alt="healthy  paws logo"></a></div>
+        <h1 class = "name">Healthy Paws - Track your pet's health</h1>
+        <a href="login.html"><button class="header-btn">Login</button></a>
+        <a href="getstarted.html"><button class="header-btn">Get Started</button></a>
+        <a href="contact.html"><button class="header-btn">Contact Us</button></a>
+        <a href="login.html"><button class="header-btn">FAQ</button></a>
+    </header>
+    <main>
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="name"aria-label="Your Name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          
+          <label for="email"aria-label="Your Email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Email:</strong> support@pethealthtracker.com</p>
+        <p><strong>Phone:</strong> +91 9087654321</p>
+        <p><strong>Address:</strong> Vadodara</p>
+      </div>
+    </div>
+  </section>
+    </main>
+  <footer>
+    <p>&copy; 2024 The Pet Health Tracker. All rights reserved.</p>
+</footer>
+  </div>
+  <script>
+    document.getElementById("email").addEventListener("input", function() {
+        var emailInput = this;
+        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (emailInput.value.match(emailPattern)) {
+            emailInput.style.border = "2px solid green";
+        } else {
+            emailInput.style.border = "2px solid red";
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #8474a1;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.name {
+    text-align: center;
+    font-size: 50px;
+    flex: 2;
+}
+
+.header-btn {
+    background-color: lavender;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-btn:hover {
+    background-color: purple;
+    color: azure;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #8474a1;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-section .social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    background-color: #8474a1;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .name {
+        font-size: 40px;
+        flex: 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-btn {
+        flex: 1 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 100%;
+        padding: 10px 0;
+    }
+
+    .footer-section .social-icons a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 30px;
+    }
+
+    .header-btn {
+        padding: 5px 10px;
+    }
+
+    .footer-section {
+        padding: 5px 0;
+    }
+
+    .footer-section .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Button hover effect */
+.header-btn, button[type="submit"] {
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-btn:hover, button[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in effect for content */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reminder form and list */
+.reminder-form, .reminder-list {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Individual reminder items */
+.reminder-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reminder-list li {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.reminder-list li:hover {
+    background-color: #eee;
+}
+
+/* Hover effects on social media icons */
+.social-icons a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Footer links hover effect */
+.footer-section ul li a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* Responsive font sizes */
+h1 {
+    font-size: 3rem;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Submit button hover effect */
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: width 0.4s ease;
+}
+
+button[type="submit"]:hover::before {
+    width: 100%;
+}

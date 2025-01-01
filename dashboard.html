@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Health Tracker Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="dashboard.html">
+          <img src="Healthy Paws.png" width="100" height="100" alt="healthy paws logo">
+        </a>
+        <h2>Pet Health Tracker</h2>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="addnewpet.html">Add New Pet</a></li>
+          <li><a href="trackhealth.html">Track Health</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1 id="welcome-message">Welcome, user</h1>
+        <p>Track and manage your pet’s health easily!</p>
+      </header>
+
+      <!-- Dashboard Overview -->
+      <section class="overview">
+        <div class="card">
+          <h3>Pet Overview</h3>
+          <p>View your Registered pet's details.</p>
+          <a href="petoverview.html"><button>View Pet Details</button></a>
+        </div>
+        <div class="card">
+          <h3>Health Tracking</h3>
+          <p>Track the health activities of your pets.</p>
+          <a href="trackhealth.html"><button>Track Now</button></a>
+        </div>
+        <div class="card">
+          <h3>Reminders & Alerts</h3>
+          <p>Stay notified!</p>
+          <a href="alert.html"><button>View Alerts</button></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="pet.html">Home</a></li>
+          <li><a href="getstarted.html">About Us</a></li>
+          <li><a href="getstarted.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: info@pethealthtracker.com</p>
+        <p>Phone: +91 9012345678</p>
+        <p>Address: Vadodara</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="Facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="Twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pet Health Tracker | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fetch user data and update the welcome message
+    fetch('http://localhost:3000/dashboard')
+      .then(response => response.json())
+      .then(data => {
+        if (data.username) {
+          document.getElementById('welcome-message').textContent = 'Welcome, ' + data.username;
+        }
+      })
+      .catch(error => console.error('Error fetching user data:', error));
+  </script>
+</body>
+</html>

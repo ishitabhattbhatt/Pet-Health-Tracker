@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pet-health-tracking-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .health-overview, .health-metrics, .medical-records, .add-new-data, .reminders {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .pet-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .pet-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  .metrics-chart {
+    height: 200px;
+    background-color: #ececec;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #8474a1;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.name{
+    text-align: center;
+    font-size: 50px;
+    flex: 2;
+}
+
+.header-btn {
+    background-color: lavender;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* transition: background-color 0.3s ease; */
+    flex: 2; /* Flex-grow for buttons to stay to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-btn:hover {
+    background-color: purple;
+    color:azure;
+}    
+
+.footer {
+    background-color: #8474a1;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ddd;
+  }
+  
+  .footer-section p {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-section .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-bottom {
+    background-color: #8474a1;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsive Footer */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  }

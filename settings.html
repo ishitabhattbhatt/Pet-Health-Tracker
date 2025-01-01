@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="pet.html"><img src ="Healthy Paws.png" width="100" height="100" alt="healthy  paws logo"></a></div>
+        <h1 class = "name">Healthy Paws - Track your pet's health</h1>
+        <a href="dashboard.html"><button class="header-btn">Dashboard</button></a>
+        <a href="petoverview.html"><button class="header-btn">Pet Overview</button></a>
+        <a href="trackhealth.html"><button class="header-btn">Track Health</button></a>
+        <a href="#"><button class="header-btn">Reminders & Alerts</button></a>
+        <a href="settings.html"><button class="header-btn">Settings</button></a>
+        <a href="login.html"><button class="header-btn">Logout</button></a>
+    </header>
+  <!-- Settings Page Wrapper -->
+  <div class="settings-page">
+    <h1>Settings</h1>
+
+    <!-- Section 1: User Profile Settings -->
+    <section class="user-settings">
+      <h2>User Profile</h2>
+      <form id="profileForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="JohnDoe" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" value="555-1234">
+
+        <button type="submit">Update Profile</button>
+      </form>
+    </section>
+
+    <!-- Section 2: Password Management -->
+    <section class="password-settings">
+      <h2>Change Password</h2>
+      <form id="passwordForm">
+        <label for="currentPassword">Current Password:</label>
+        <input type="password" id="currentPassword" name="currentPassword" required>
+
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <button type="submit">Update Password</button>
+      </form>
+    </section>
+
+    <!-- Section 3: Notification Preferences -->
+    <section class="notification-settings">
+      <h2>Notification Preferences</h2>
+      <form id="notificationsForm">
+        <label for="emailNotifications">
+          <input type="checkbox" id="emailNotifications" name="emailNotifications" checked>
+          Receive email notifications
+        </label>
+
+        <label for="smsNotifications">
+          <input type="checkbox" id="smsNotifications" name="smsNotifications">
+          Receive SMS notifications
+        </label>
+
+        <button type="submit">Update Preferences</button>
+      </form>
+    </section>
+
+    <!-- Section 4: Pet Information -->
+    <section class="pet-settings">
+      <h2>Manage Pet Information</h2>
+      <form id="petForm">
+        <label for="petName">Pet Name:</label>
+        <input type="text" id="petName" name="petName" value="Buddy" required>
+
+        <label for="petAge">Pet Age:</label>
+        <input type="number" id="petAge" name="petAge" value="3" min="0">
+
+        <label for="petType">Pet Type:</label>
+        <select id="petType" name="petType">
+          <option value="dog" selected>Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+        </select>
+
+        <button type="submit">Update Pet Info</button>
+      </form>
+    </section>
+    
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Left: Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="pet.html">Home</a></li>
+          <li><a href="getstarted.html">About Us</a></li>
+          <li><a href="getstarted.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Footer Center: Contact Info -->
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: info@pethealthtracker.com</p>
+        <p>Phone: +91 9012345678</p>
+        <p>Address: Vadodara</p>
+      </div>
+  
+      <!-- Footer Right: Social Media Links -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="Facebook PNG Ícone Logo Transparente Sem Fundo.jpeg" alt="Facebook"></a>
+          <a href="#"><img src="x twitter logo _ Twitter _ Social media logo.jpeg" alt="Twitter"></a>
+          <a href="#"><img src="Instagram Logo PNG - Free Download.jpeg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pet Health Tracker | All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="settings.js"></script>
+</body>
+</html>

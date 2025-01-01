@@ -1,0 +1,203 @@
+/* Basic styling for the form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url(pets.png);
+    background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  text-align: center; /* Centers the text (optional) */
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+  }
+  #heading{
+    color: black;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group input[type="file"] {
+    padding: 3px;
+  }
+  
+  .form-group button {
+    background-color: #8474a1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .form-group button:hover {
+    background-color: purple;
+  }
+/* Header Styles */
+  /* Responsive Header */
+  @media screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .site-title {
+      text-align: left;
+      margin: 10px 0;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #8474a1;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.name{
+    text-align: center;
+    font-size: 50px;
+    flex: 2;
+}
+
+.header-btn {
+    background-color: lavender;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* transition: background-color 0.3s ease; */
+    flex: 2; /* Flex-grow for buttons to stay to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-btn:hover {
+    background-color: purple;
+    color:azure;
+}    
+
+.footer {
+    background-color: #8474a1;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ddd;
+  }
+  
+  .footer-section p {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-section .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-bottom {
+    background-color: #8474a1;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsive Footer */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  }
